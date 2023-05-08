@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export default createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   *,
   *::before,
   *::after {
@@ -17,6 +17,8 @@ export const container = {
   maxWidth: "500px",
   margin: "40px auto",
   padding: "30px",
+  minHeight: "calc(150vh - 130px)",
+  overflowY: "auto",
 };
 
 export const textField = {
@@ -64,39 +66,39 @@ export const button = {
   marginRight: "8px",
 };
 
-export const deleteButton = {
-  ...button,
-  backgroundColor: "#ff0000",
+export const buttonStyle = {
+  backgroundColor: "#007bff",
+  color: "white",
+  padding: "10px",
+  borderRadius: "5px",
+  border: "none",
+  marginRight: "10px",
+  cursor: "pointer",
 };
 
-export const dropdownContainer = {
+export const footer = {
+  position: "fixed",
+  bottom: 0,
+  left: 0,
+  right: 0,
+  height: "60px",
+  backgroundColor: "#ccc",
   display: "flex",
   alignItems: "center",
-  marginLeft: "auto",
+  justifyContent: "center",
+  padding: "0 20px",
 };
 
-export const dropdown = {
-  width: "30px",
-  padding: "10px 8px",
-  fontSize: "14px",
-  borderRadius: "4px",
-  border: "1px solid #ccc",
-  backgroundColor: "#f2f2f2",
-  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+export const main = {
+  paddingBottom: "80px", // adjust this value as needed
+};
+
+export const deleteButton = {
+  backgroundColor: "red",
+  color: "white",
+  padding: "10px",
+  borderRadius: "5px",
+  border: "none",
+  marginRight: "10px",
   cursor: "pointer",
-  display: "inline-block",
-  verticalAlign: "middle",
-  marginLeft: "-1px",
-};
-
-export const dropdownArrow = {
-  position: "absolute",
-  top: "50%",
-  right: "10px",
-  transform: "translateY(-50%) rotate(90deg)",
-  width: "0",
-  height: "0",
-  borderLeft: "5px solid transparent",
-  borderRight: "5px solid transparent",
-  borderTop: "5px solid #000",
 };

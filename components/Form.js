@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TextField from "@/components/TextField";
 import Button from "@/components/Button";
+import SubmitButton from "@/components/SubmitButton";
 import {
   container,
   textField,
@@ -8,9 +9,7 @@ import {
   buttonContainer,
   button,
   deleteButton,
-  dropdownContainer,
   dropdown,
-  dropdownArrow,
 } from "@/styles";
 
 const options = ["Sports goals", "Work goals", "Education goals"];
@@ -36,7 +35,13 @@ const Form = () => {
 
   const handleOptionChange = (option) => setSelectedOption(option);
   const handleToggle = () => setIsPublic(!isPublic);
-  const handleDelete = () => setMessage([]);
+  const handleDelete = () => {
+    if (numFields > 1) {
+      setNumFields(numFields - 1);
+      setName(name.slice(0, -1));
+      setMessage(message.slice(0, -1));
+    }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -84,21 +89,20 @@ const Form = () => {
         <h2>Create your goal</h2>
         {renderFields()}
         <div style={buttonContainer}>
-          <Button style={deleteButton} onClick={handleDelete}>
-            Delete Message
-          </Button>
-          <Button style={button} onClick={handleToggle}>
-            {isPublic ? "Public" : "Privacy"}
-          </Button>
-        </div>
-        <Button style={button} type="submit">
-          Submit
-        </Button>
-        <div style={{ display: "flex", justifyContent: "center" }}>
           <Button style={button} onClick={handleAddField}>
             Add Another Field
           </Button>
+          <Button style={deleteButton} onClick={handleDelete}>
+            Delete Message
+          </Button>
+          <Button
+            style={{ ...button, width: "fit-content" }}
+            onClick={handleToggle}
+          >
+            {isPublic ? "Public" : "Privacy"}
+          </Button>
         </div>
+        <SubmitButton />
       </form>
     </div>
   );

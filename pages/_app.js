@@ -1,10 +1,14 @@
-import GlobalStyle from "../styles";
+import React from "react";
+import Header from "@/components/header";
+import Form from "@/components/Form";
+import Footer from "@/components/Footer";
 
-export default function App({ Component, pageProps }) {
-  return (
-    <>
-      <GlobalStyle />
-      <Component {...pageProps} />
-    </>
-  );
-}
+const App = () => (
+  <div>
+    <Header />
+    <Form />
+    <Footer />
+  </div>
+);
+
+export default App;

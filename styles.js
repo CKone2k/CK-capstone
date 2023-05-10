@@ -21,6 +21,8 @@ export const containerStyles = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
+  justifyContent: "center",
+  paddingBottom: "100px",
 };
 
 export const textFieldStyles = {
@@ -89,24 +91,17 @@ export const buttonStyles = {
 };
 
 export const footerStyles = {
-  position: "fixed",
-  bottom: 0,
-  left: 0,
-  right: 0,
-  height: "40px",
-  backgroundColor: "#ccc",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  padding: "0 10px",
-  zIndex: -1,
-};
-
-export const mainStyles = {
+  backgroundColor: "#f2f2f2",
+  padding: "20px",
   display: "flex",
   flexDirection: "column",
-  minHeight: "100vh",
-  paddingBottom: "100px",
+  justifyContent: "center",
+  alignItems: "center",
+  position: "fixed",
+  bottom: "0",
+  left: "0",
+  right: "0",
+  zIndex: "1",
 };
 
 export const headerStyles = {
@@ -121,7 +116,10 @@ export const menuBarStyles = {
   backgroundColor: "#f2f2f2",
   padding: "20px",
   position: "fixed",
-  bottom: "60px",
+  marginBottom: "80px",
+  bottom: "0",
+  left: "0",
+  right: "0",
   zIndex: "1",
 };
 

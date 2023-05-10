@@ -1,19 +1,17 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import Button from "./Button";
 
-const ToggleButton = ({ onPublic, onPrivate }) => {
-  const [isToggled, setIsToggled] = useState(false);
+const ToggleButton = ({ privateText, publicText }) => {
+  const [isPrivate, setIsPrivate] = useState(true);
 
   const handleClick = () => {
-    setIsToggled(!isToggled);
-    if (isToggled) {
-      onPrivate();
-    } else {
-      onPublic();
-    }
+    setIsPrivate(!isPrivate);
   };
 
   return (
-    <button onClick={handleClick}>{isToggled ? "Public" : "Private"}</button>
+    <Button onClick={handleClick}>
+      {isPrivate ? privateText : publicText}
+    </Button>
   );
 };
 

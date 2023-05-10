@@ -1,13 +1,16 @@
+import React from "react";
 import Header from "@/components/header";
-import Form from "@/components/Form";
+import CreateGoalcardPage from "@/components/CreateGoalcardPage";
 import Footer from "@/components/Footer";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Header />
-      <Form />
+      <CreateGoalcardPage />
       <Footer />
     </>
   );
-}
+};
+
+export default Home;

@@ -1,12 +1,14 @@
 import React from "react";
 import Button from "./Button";
-import { button } from "@/styles";
+import { buttonContainerStyles, buttonStyles } from "@/styles";
 
 const SubmitButton = ({ onClick }) => {
   return (
-    <Button style={button} type="submit" onClick={onClick}>
-      Add Your goal
-    </Button>
+    <div style={buttonContainerStyles}>
+      <Button style={buttonStyles} type="submit" onClick={onClick}>
+        Add Your goal
+      </Button>
+    </div>
   );
 };
 

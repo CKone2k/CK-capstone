@@ -1,9 +1,8 @@
 import React from "react";
+import { headerStyles } from "@/styles";
 
 const Header = () => (
-  <header
-    style={{ backgroundColor: "#f2f2f2", padding: "5px", marginBottom: "5px" }}
-  >
+  <header style={headerStyles}>
     <h1 style={{ textAlign: "center" }}>Goal Tracker</h1>
   </header>
 );

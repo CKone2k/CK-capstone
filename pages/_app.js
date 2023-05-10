@@ -1,14 +1,17 @@
 import React from "react";
 import Header from "@/components/header";
-import Form from "@/components/Form";
+import CreateGoalcardPage from "@/components/CreateGoalcardPage";
 import Footer from "@/components/Footer";
+import { mainStyles } from "@/styles";
 
-const App = () => (
-  <div>
-    <Header />
-    <Form />
-    <Footer />
-  </div>
-);
+const App = () => {
+  return (
+    <div style={mainStyles}>
+      <Header />
+      <CreateGoalcardPage />
+      <Footer />
+    </div>
+  );
+};
 
 export default App;

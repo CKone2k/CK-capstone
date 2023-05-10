@@ -1,60 +1,16 @@
 import React from "react";
+import { menuBarStyles, menuButtonStyles } from "../styles";
 
-const MenuBar = () => {
-  const handleCreateClick = () => {};
-
-  const handleMainClick = () => {};
-
-  const handleProfileClick = () => {};
-
+const MenuBar = ({ onCreateClick, onMainClick, onProfileClick }) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        backgroundColor: "#f2f2f2",
-        padding: "20px",
-      }}
-    >
-      <button
-        style={{
-          backgroundColor: "transparent",
-          border: "none",
-          padding: "10px",
-          marginRight: "40px",
-          cursor: "pointer",
-          fontSize: "18px",
-          boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-        }}
-        onClick={handleCreateClick}
-      >
+    <div style={menuBarStyles}>
+      <button style={menuButtonStyles} onClick={onCreateClick}>
         Create
       </button>
-      <button
-        style={{
-          backgroundColor: "transparent",
-          border: "none",
-          padding: "10px",
-          marginRight: "40px",
-          cursor: "pointer",
-          fontSize: "18px",
-          boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-        }}
-        onClick={handleMainClick}
-      >
+      <button style={menuButtonStyles} onClick={onMainClick}>
         Main
       </button>
-      <button
-        style={{
-          backgroundColor: "transparent",
-          border: "none",
-          padding: "10px",
-          cursor: "pointer",
-          fontSize: "18px",
-          boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-        }}
-        onClick={handleProfileClick}
-      >
+      <button style={menuButtonStyles} onClick={onProfileClick}>
         Profile
       </button>
     </div>

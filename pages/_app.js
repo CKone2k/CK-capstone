@@ -1,10 +1,17 @@
-import GlobalStyle from "../styles";
+import React from "react";
+import Header from "@/components/header";
+import CreateGoalcardPage from "@/components/CreateGoalcardPage";
+import Footer from "@/components/Footer";
+import { mainStyles } from "@/styles";
 
-export default function App({ Component, pageProps }) {
+const App = () => {
   return (
-    <>
-      <GlobalStyle />
-      <Component {...pageProps} />
-    </>
+    <div style={mainStyles}>
+      <Header />
+      <CreateGoalcardPage />
+      <Footer />
+    </div>
   );
-}
+};
+
+export default App;

@@ -1,7 +1,16 @@
-export default function HomePage() {
+import React from "react";
+import Header from "@/components/header";
+import CreateGoalcardPage from "@/components/CreateGoalcardPage";
+import Footer from "@/components/Footer";
+
+const Home = () => {
   return (
-    <div>
-      <h1>Hello from Next.js</h1>
-    </div>
+    <>
+      <Header />
+      <CreateGoalcardPage />
+      <Footer />
+    </>
   );
-}
+};
+
+export default Home;

@@ -13,9 +13,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 export const containerStyles = {
-  maxWidth: "500px",
+  maxWidth: "350px",
   margin: "40px auto",
-  padding: "30px",
+  padding: "20px",
   minHeight: "calc(150vh - 130px)",
   overflowY: "auto",
   display: "flex",
@@ -25,12 +25,12 @@ export const containerStyles = {
 
 export const textFieldStyles = {
   margin: "0 auto 10px",
-  width: "calc(100% - 35px)",
-  padding: "10px 8px",
-  fontSize: "14px",
+  width: "calc(100% - 25px)",
+  padding: "8px 6px",
+  fontSize: "12px",
   borderRadius: "4px",
   border: "1px solid #ccc",
-  marginBottom: "16px",
+  marginBottom: "12px",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
   backgroundColor: "#fff",
   display: "inline-block",
@@ -40,24 +40,27 @@ export const textFieldStyles = {
 export const textareaStyles = {
   margin: "10px 0",
   width: "100%",
-  height: "100px",
-  padding: "8px",
-  fontSize: "14px",
+  height: "80px",
+  padding: "6px",
+  fontSize: "12px",
   borderRadius: "4px",
   border: "1px solid #ccc",
-  marginBottom: "16px",
+  marginBottom: "12px",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
   backgroundColor: "#fff",
 };
 
 export const dropdownStyles = {
-  margin: "0 auto 16px",
-  padding: "8px",
-  fontSize: "14px",
+  margin: "10px auto",
+  padding: "6px",
+  fontSize: "12px",
   borderRadius: "4px",
-  border: "1px solid #ccc",
+  border: "none",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
   backgroundColor: "#fff",
+  color: "#333",
+  width: "100%",
+  maxWidth: "300px",
 };
 
 export const buttonContainerStyles = {
@@ -67,18 +70,18 @@ export const buttonContainerStyles = {
 };
 
 export const buttonStyles = {
-  padding: "8px 16px",
+  padding: "6px 12px",
   backgroundColor: "#ff3333",
   color: "#fff",
   border: "none",
   borderRadius: "4px",
   cursor: "pointer",
-  fontSize: "14px",
+  fontSize: "12px",
   fontWeight: "bold",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
   width: "100%",
-  maxWidth: "200px",
-  margin: "0 auto",
+  maxWidth: "150px",
+  margin: "10px auto 0",
   display: "block",
   textAlign: "center",
   lineHeight: "1.5",
@@ -90,12 +93,12 @@ export const footerStyles = {
   bottom: 0,
   left: 0,
   right: 0,
-  height: "60px",
+  height: "40px",
   backgroundColor: "#ccc",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  padding: "0 20px",
+  padding: "0 10px",
   zIndex: -1,
 };
 
@@ -108,8 +111,8 @@ export const mainStyles = {
 
 export const headerStyles = {
   backgroundColor: "#f2f2f2",
-  padding: "5px",
-  marginBottom: "5px",
+  padding: "3px",
+  marginBottom: "3px",
   textAlign: "center",
 };
 export const menuBarStyles = {
@@ -144,7 +147,7 @@ export const newButtonStyles = {
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
   width: "100%",
   maxWidth: "200px",
-  margin: "10px",
+  margin: "10px auto",
   display: "block",
   textAlign: "center",
   lineHeight: "1.5",

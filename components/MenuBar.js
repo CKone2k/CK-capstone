@@ -1,4 +1,3 @@
-import React from "react";
 import { menuBarStyles, menuButtonStyles } from "../styles";
 
 const MenuBar = ({ onCreateClick, onMainClick, onProfileClick }) => {

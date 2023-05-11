@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "@/components/header";
 import CardCreator from "@/components/CardCreator";
 import Footer from "@/components/Footer";
 import MenuBar from "@/components/MenuBar";
 import ProfilePage from "@/components/ProfilePage";
+import MainPage from "@/components/MainPage";
 import { mainStyles } from "@/styles";
+
 const App = () => {
   const [currentPage, setCurrentPage] = useState("main");
 
@@ -34,7 +36,7 @@ const App = () => {
           <Footer />
         </>
       )}
-      {currentPage === "main" && <Footer />}
+      {currentPage === "main" && <MainPage />}
       {currentPage === "profile" && (
         <>
           <ProfilePage />

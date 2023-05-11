@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { textFieldStyles, textareaStyles, newButtonStyles } from "@/styles";
 import TextArea from "@/components/TextArea";
 import TextField from "@/components/TextField";

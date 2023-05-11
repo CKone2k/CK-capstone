@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "@/components/header";
 import MenuBar from "@/components/MenuBar";
 import CardCreator from "@/components/CardCreator";

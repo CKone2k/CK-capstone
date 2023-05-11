@@ -1,4 +1,3 @@
-import React from "react";
 import { textareaStyles } from "@/styles";
 
 const TextArea = ({ placeholder, value, onChange }) => {

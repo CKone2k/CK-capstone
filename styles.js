@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: system-ui;
+    font-family: Helvetica;
   }
 `;
 export const containerStyles = {

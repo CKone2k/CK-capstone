@@ -25,7 +25,6 @@ const CardCreator = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // handle submitting data to database
   };
 
   return (

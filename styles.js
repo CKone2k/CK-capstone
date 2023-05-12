@@ -233,3 +233,33 @@ export const weekdayCheckboxBoxStyles = (checked) => ({
   cursor: "pointer",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
 });
+
+export const userFormStyles = {
+  profileContainer: {
+    padding: "20px",
+    margin: "20px",
+    borderRadius: "10px",
+  },
+  label: {
+    marginBottom: "5px",
+    display: "block",
+  },
+  input: {
+    borderRadius: "3px",
+    border: "1px solid #ccc",
+    padding: "5px",
+    marginBottom: "10px",
+    width: "100%",
+    maxWidth: "300px",
+  },
+  textarea: {
+    borderRadius: "3px",
+    border: "1px solid #ccc",
+    padding: "5px",
+    marginBottom: "10px",
+    width: "100%",
+    maxWidth: "300px",
+    resize: "vertical",
+    height: "100px",
+  },
+};

@@ -1,44 +1,41 @@
 import { useState } from "react";
-import TextField from "../components/TextField";
-import TextArea from "../components/TextArea";
-import ToggleButton from "../components/ToggleButton";
-import Button from "../components/Button";
+import ToggleButton from "./ToggleButton";
+import Button from "./Button";
+import UserForm from "./UserForm";
 
-const ProfilePage = () => {
-  const [name, setName] = useState("");
-  const [bio, setBio] = useState("");
+const ProfilePage = ({ containerStyles }) => {
   const [isPrivate, setIsPrivate] = useState(true);
+  const [username, setUsername] = useState("");
+  const [bio, setBio] = useState("");
 
-  const handleNameChange = (event) => {
-    setName(event.target.value);
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
   };
 
   const handleBioChange = (event) => {
     setBio(event.target.value);
   };
-
   const handleToggleClick = () => {
     setIsPrivate(!isPrivate);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // handle submitting profile data to database
-  };
-
   return (
-    <div>
+    <div style={containerStyles}>
       <h1>Profile</h1>
-      <form onSubmit={handleSubmit}>
-        <TextField label="Name" value={name} onChange={handleNameChange} />
-        <TextArea placeholder="Bio" value={bio} onChange={handleBioChange} />
-        <ToggleButton
-          privateText="Private Profile"
-          publicText="Public Profile"
-          onClick={handleToggleClick}
-        />
-        <Button type="submit">Save Profile</Button>
-      </form>
+      <UserForm
+        username={username}
+        onUsernameChange={handleUsernameChange}
+        bio={bio}
+        onBioChange={handleBioChange}
+        containerStyles={containerStyles}
+      />
+
+      <ToggleButton
+        privateText="Private Profile"
+        publicText="Public Profile"
+        onClick={handleToggleClick}
+      />
+      <Button type="submit">Save Profile</Button>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import MenuBar from "@/components/MenuBar";
 import ProfilePage from "@/components/ProfilePage";
 import MainPage from "@/components/MainPage";
-import { mainStyles } from "@/styles";
+import { containerStyles, GlobalStyle } from "@/styles";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("main");
@@ -23,27 +23,35 @@ const App = () => {
   };
 
   return (
-    <div style={mainStyles}>
-      <Header />
-      <MenuBar
-        onCreateClick={handleCreateClick}
-        onMainClick={handleMainClick}
-        onProfileClick={handleProfileClick}
-      />
-      {currentPage === "create" && (
-        <>
-          <CardCreator />
-          <Footer />
-        </>
-      )}
-      {currentPage === "main" && <MainPage />}
-      {currentPage === "profile" && (
-        <>
-          <ProfilePage />
-          <Footer />
-        </>
-      )}
-    </div>
+    <>
+      <GlobalStyle />
+      <div style={containerStyles}>
+        <Header />
+        <MenuBar
+          onCreateClick={handleCreateClick}
+          onMainClick={handleMainClick}
+          onProfileClick={handleProfileClick}
+        />
+        {currentPage === "create" && (
+          <>
+            <CardCreator />
+            <Footer />
+          </>
+        )}
+        {currentPage === "main" && (
+          <>
+            <MainPage />
+            <Footer />
+          </>
+        )}
+        {currentPage === "profile" && (
+          <>
+            <ProfilePage />
+            <Footer />
+          </>
+        )}
+      </div>
+    </>
   );
 };
 

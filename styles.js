@@ -8,26 +8,29 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    backgroundColor: "#f2f2f2",
     margin: 0;
     font-family: Helvetica;
   }
 `;
 export const containerStyles = {
-  maxWidth: "350px",
+  maxWidth: "375px",
   margin: "40px auto",
+  marginTop: "80px",
   padding: "20px",
-  minHeight: "calc(150vh - 130px)",
+  minHeight: "calc(100vh - 130px)",
   overflowY: "auto",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
   paddingBottom: "100px",
+  marginBottom: "80px",
 };
 
 export const textFieldStyles = {
   margin: "0 auto 10px",
-  width: "calc(100% - 25px)",
+  width: "calc(100% - 45px)",
   padding: "8px 6px",
   fontSize: "12px",
   borderRadius: "4px",
@@ -37,6 +40,9 @@ export const textFieldStyles = {
   backgroundColor: "#fff",
   display: "inline-block",
   verticalAlign: "middle",
+  textAlign: "center",
+  marginLeft: "10px",
+  marginRight: "10px",
 };
 
 export const textareaStyles = {
@@ -50,6 +56,7 @@ export const textareaStyles = {
   marginBottom: "12px",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
   backgroundColor: "#fff",
+  textAlign: "center",
 };
 
 export const dropdownStyles = {
@@ -60,9 +67,10 @@ export const dropdownStyles = {
   border: "none",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
   backgroundColor: "#fff",
+  border: "1px solid #ccc",
   color: "#333",
   width: "100%",
-  maxWidth: "300px",
+  maxWidth: "200px",
 };
 
 export const buttonContainerStyles = {
@@ -91,9 +99,9 @@ export const buttonStyles = {
 };
 
 export const footerStyles = {
-  backgroundColor: "#f2f2f2",
-  padding: "20px",
+  padding: "5px",
   display: "flex",
+  backgroundColor: "#e6e6e6",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
@@ -105,18 +113,23 @@ export const footerStyles = {
 };
 
 export const headerStyles = {
-  backgroundColor: "#f2f2f2",
+  backgroundColor: "#e6e6e6",
   padding: "3px",
   marginBottom: "3px",
   textAlign: "center",
+  width: "100%",
+  position: "fixed",
+  top: 0,
+  left: 0,
 };
+
 export const menuBarStyles = {
   display: "flex",
   justifyContent: "center",
-  backgroundColor: "#f2f2f2",
+  backgroundColor: "#e6e6e6",
   padding: "20px",
   position: "fixed",
-  marginBottom: "80px",
+  marginBottom: "50px",
   bottom: "0",
   left: "0",
   right: "0",
@@ -127,10 +140,11 @@ export const menuButtonStyles = {
   backgroundColor: "transparent",
   border: "none",
   padding: "10px",
-  marginRight: "40px",
+  margin: "16px",
   cursor: "pointer",
   fontSize: "18px",
   boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+  flex: 1,
 };
 
 export const newButtonStyles = {
@@ -150,4 +164,102 @@ export const newButtonStyles = {
   textAlign: "center",
   lineHeight: "1.5",
   textTransform: "uppercase",
+};
+export const timeRangeStyles = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: "#fff",
+  border: "1px solid #ccc",
+  borderRadius: "4px",
+  padding: "10px",
+  marginBottom: "12px",
+  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+  fontSize: "12px",
+  width: "100%",
+  maxWidth: "500px",
+  marginTop: "20px",
+};
+
+export const timeRangeButtonStyles = {
+  backgroundColor: "transparent",
+  border: "none",
+  padding: "8px",
+  cursor: "pointer",
+  fontSize: "12px",
+  fontWeight: "bold",
+  textTransform: "uppercase",
+  color: "#333",
+  marginRight: "10px",
+  display: "inline-block",
+};
+
+export const timeRangeSelectedStyles = {
+  backgroundColor: "#ff3333",
+  color: "#fff",
+  borderRadius: "4px",
+  padding: "8px",
+};
+export const weekdayCheckboxStyles = {
+  display: "flex",
+  flexWrap: "wrap",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: "#fff",
+  border: "1px solid #ccc",
+  borderRadius: "4px",
+  padding: "10px",
+  marginBottom: "12px",
+  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+  fontSize: "12px",
+  width: "100%",
+  maxWidth: "500px",
+  marginTop: "20px",
+};
+
+export const weekdayCheckboxLabelStyles = {
+  margin: 0,
+};
+
+export const weekdayCheckboxBoxStyles = (checked) => ({
+  width: "70px",
+  height: "70px",
+  borderRadius: "4px",
+  margin: "8px",
+  backgroundColor: checked ? "#ff3333" : "#f3f3f3",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  cursor: "pointer",
+  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+});
+
+export const userFormStyles = {
+  profileContainer: {
+    padding: "20px",
+    margin: "20px",
+    borderRadius: "10px",
+  },
+  label: {
+    marginBottom: "5px",
+    display: "block",
+  },
+  input: {
+    borderRadius: "3px",
+    border: "1px solid #ccc",
+    padding: "5px",
+    marginBottom: "10px",
+    width: "100%",
+    maxWidth: "300px",
+  },
+  textarea: {
+    borderRadius: "3px",
+    border: "1px solid #ccc",
+    padding: "5px",
+    marginBottom: "10px",
+    width: "100%",
+    maxWidth: "300px",
+    resize: "vertical",
+    height: "100px",
+  },
 };

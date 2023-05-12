@@ -12,6 +12,8 @@ const CardCreator = () => {
   const [cards, setCards] = useState([]);
   const [selectedOption, setSelectedOption] = useState(options[0]);
   const [isPublic, setIsPublic] = useState(false);
+  const [selectedStartTime, setSelectedStartTime] = useState(null);
+  const [selectedEndTime, setSelectedEndTime] = useState(null);
 
   const handleCreateCard = (cardData) => {
     setCards([...cards, cardData]);
@@ -31,11 +33,12 @@ const CardCreator = () => {
   };
 
   const handleWeekdayChange = (weekdays) => {
-    setSelectedWeekdays(weekdays);
+    // handle weekday change here
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // handle form submit here
   };
 
   return (

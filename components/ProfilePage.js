@@ -1,8 +1,9 @@
 import { useState } from "react";
-import TextField from "../components/TextField";
-import TextArea from "../components/TextArea";
-import ToggleButton from "../components/ToggleButton";
-import Button from "../components/Button";
+import TextField from "./TextField";
+import TextArea from "./TextArea";
+import ToggleButton from "./ToggleButton";
+import Button from "./Button";
+import { containerStyles, GlobalStyle } from "@/styles";
 
 const ProfilePage = () => {
   const [name, setName] = useState("");
@@ -23,22 +24,20 @@ const ProfilePage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // handle submitting profile data to database
   };
 
   return (
-    <div>
+    <div style={containerStyles}>
       <h1>Profile</h1>
-      <form onSubmit={handleSubmit}>
-        <TextField label="Name" value={name} onChange={handleNameChange} />
-        <TextArea placeholder="Bio" value={bio} onChange={handleBioChange} />
-        <ToggleButton
-          privateText="Private Profile"
-          publicText="Public Profile"
-          onClick={handleToggleClick}
-        />
-        <Button type="submit">Save Profile</Button>
-      </form>
+
+      <TextField label="Name" value={name} onChange={handleNameChange} />
+      <TextArea placeholder="Bio" value={bio} onChange={handleBioChange} />
+      <ToggleButton
+        privateText="Private Profile"
+        publicText="Public Profile"
+        onClick={handleToggleClick}
+      />
+      <Button type="submit">Save Profile</Button>
     </div>
   );
 };

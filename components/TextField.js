@@ -1,16 +1,13 @@
 import { textFieldStyles } from "@/styles";
 
-const TextField = ({ label, value, onChange }) => {
+const TextField = ({ placeholder, value, onChange }) => {
   return (
-    <div style={{ textAlign: "center" }}>
-      <label style={{ display: "block", marginBottom: "8px" }}>{label}</label>
-      <input
-        type="text"
-        value={value}
-        onChange={onChange}
-        style={textFieldStyles}
-      />
-    </div>
+    <textarea
+      value={value}
+      onChange={onChange}
+      style={textFieldStyles}
+      placeholder={placeholder}
+    />
   );
 };
 
